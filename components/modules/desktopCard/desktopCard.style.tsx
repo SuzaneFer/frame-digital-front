@@ -10,5 +10,7 @@ const DesktopCardStyle = styled.div`
   background-color: #FAF8FF;
   padding: 4rem 1rem 1rem 1rem;
   border-radius: 0.5rem;
+
+  box-shadow:  0px 1px 3px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
 `
 export default DesktopCardStyle;

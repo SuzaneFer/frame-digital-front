@@ -1,8 +1,9 @@
-import BaseButton, { ContentButton } from './button.style';
+import { Button as MaterialButton, CircularProgress, Typography } from '@mui/material';
 import { ElementType } from 'react';
+import ContentButton from './button.style';
 
 interface ButtonProps {
-  type: 'primary' | 'secondary';
+  variant?: 'text' | 'outlined' | 'contained';
   label: string;
   disabled?: boolean;
   buttonType?: 'submit' | 'reset' | 'button';
@@ -13,7 +14,7 @@ interface ButtonProps {
 }
 
 const Button = ({
-  type,
+  variant,
   label,
   onClick,
   disabled,
@@ -22,25 +23,31 @@ const Button = ({
   icon: Icon,
   loading,
 }: ButtonProps) => {
+
   const getButtonContent = () => {
+    if (loading) {
+      return <CircularProgress size={24} />;
+    }
     return (
       <ContentButton>
         {Icon ? <Icon /> : null}
-        <p className='label-large' data-cy={label}>{label}</p>
+        <Typography variant="body1" component="span">
+          {label}
+        </Typography>
       </ContentButton>
     );
   };
 
   return (
-    <BaseButton
-      type={buttonType}
+    <MaterialButton
+      variant={variant}
       onClick={loading ? () => null : onClick}
-      className={`${className} button-${disabled ? 'disabled' : type}`}
-      disabled={disabled}
-      data-cy="baseButton"
+      className={className}
+      disabled={disabled || loading}
+      type={buttonType}
     >
       {getButtonContent()}
-    </BaseButton>
+    </MaterialButton>
   );
 };
 
@@ -51,6 +58,7 @@ Button.defaultProps = {
   className: '',
   icon: undefined,
   loading: false,
+  variant: 'contained',
 };
 
 export default Button;

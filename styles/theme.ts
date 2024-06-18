@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import colors from './colors';
 
 declare module '@mui/material/styles' {
   interface Theme {
@@ -16,7 +17,7 @@ declare module '@mui/material/styles' {
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2',
+      main: colors.blue_900,
     },
     secondary: {
       main: '#dc004e',
@@ -24,15 +25,70 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: 'Fira Sans, sans-serif',
+    //headline-small
+    h1:{
+      fontFamily: 'Fira Sans, sans-serif',
+      textAlign: 'center',
+      fontSize: '1.5rem',
+      fontWeight: '400',
+      lineHeight: '2rem',
+      color:  colors.blue_900,
+      marginTop: '1rem',
+      marginBotton: '1rem',
+    },
+    //body-medium
+    h2: {
+      fontFamily: 'Fira Sans, sans-serif',
+      textAlign: 'center',
+      fontSize: '0.875rem',
+      lineHeight: '1.25rem',
+      fontWeight: 'normal',
+      color:  colors.blue_900,
+      marginTop: '0.75rem',
+      marginBottom: '0.75rem',
+    },
+    //label-large
+    body1: {
+      fontFamily: 'Fira Sans, sans-serif',
+      textAlign: 'center',
+      fontSize: '0.875rem',
+      lineHeight: '1.25rem',
+      fontWeight: '500',
+      color:  colors.white,
+    },
   },
   status: {
     danger: 'orange',
   },
   components: {
     MuiCssBaseline: {
-      styleOverrides: `
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-      `,
+
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          fontSize: '1rem',
+          padding: '10px 20px',
+        },
+        contained: {
+          backgroundColor: colors.blue_900,
+          color: colors.white,
+          borderRadius: '1.5rem',
+          height: '3rem',
+          maxWidth: '328px',
+          width: '100%',
+          '&:hover': {
+            backgroundColor: colors.blue_700,
+          },
+        },
+        outlined: {
+          backgroundColor: colors.red_500,
+          '&:hover': {
+            backgroundColor: colors.red_700,
+          },
+        },
+      },
     },
   },
 });

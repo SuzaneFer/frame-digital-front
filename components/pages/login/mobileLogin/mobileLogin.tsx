@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "../../../atoms/button/button";
 import MobileCardStyle from "./mobileLogin.style";
 import MicrosoftIcon from '@mui/icons-material/Microsoft';
+import { Typography } from "@mui/material";
 interface MobileCardProps {
 
 }
@@ -21,10 +22,13 @@ const MobileCard = ({
       />
     </div>
     <div className="content-card">
-      <h1 className="headline-small">Frame Digital</h1>
-      <h2 className="body-medium">Fixe e acompanhe suas fixações mensais de maneira rápida e eficiente</h2>
+      <Typography variant="h1" component="h1">
+        Frame Digital
+      </Typography>
+      <Typography variant="h2" component="h2" style={{maxWidth: '328px'}}>
+        Fixe e acompanhe suas fixações mensais de maneira rápida e eficiente
+      </Typography>
       <Button 
-        type='primary' 
         label='Entrar com a Microsoft'
         icon={MicrosoftIcon}
       />

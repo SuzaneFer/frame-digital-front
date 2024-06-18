@@ -7,7 +7,9 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: Montserrat, sans-serif;
+    font-family: Fira Sans, sans-serif;
+    background: #FAF8FF;
+    
 
     #__next {
       width: 100%;
