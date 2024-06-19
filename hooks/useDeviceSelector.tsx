@@ -1,11 +1,11 @@
-import { DEVICE_TYPES } from "../utils/constants";
+import { DEVICE_TYPES_CONST } from "../utils/constants";
 import useDeviceType from "./useDeviceType";
 
 
 export default function useDeviceSelector(valueIfMobile: any, valueIfDesktop: any) {
   const deviceType = useDeviceType();
 
-  if (deviceType === DEVICE_TYPES.mobile) {
+  if (deviceType === DEVICE_TYPES_CONST.mobile) {
     return valueIfMobile;
   }
   return valueIfDesktop;
@@ -14,10 +14,10 @@ export default function useDeviceSelector(valueIfMobile: any, valueIfDesktop: an
 export const useDeviceSelectorNoDefault = (valueIfMobile: any, valueIfDesktop: any) => {
   const deviceType = useDeviceType();
 
-  if (deviceType === DEVICE_TYPES.mobile) {
+  if (deviceType === DEVICE_TYPES_CONST.mobile) {
     return valueIfMobile;
   }
-  if (deviceType === DEVICE_TYPES.desktop) {
+  if (deviceType === DEVICE_TYPES_CONST.desktop) {
     return valueIfDesktop;
   }
   return null;

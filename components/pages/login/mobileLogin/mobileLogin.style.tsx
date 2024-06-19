@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MobileCardStyle = styled.div`
+const MobileLoginStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,4 +24,4 @@ const MobileCardStyle = styled.div`
   }  
 `
 
-export default MobileCardStyle;
+export default MobileLoginStyle;

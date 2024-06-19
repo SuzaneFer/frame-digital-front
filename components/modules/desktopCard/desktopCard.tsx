@@ -21,7 +21,7 @@ const DesktopCard = ({
       <Typography variant="h1" component="h1">
         Frame Digital
       </Typography>
-      <Typography variant="h2" component="h2" style={{maxWidth: '328px'}}>
+      <Typography variant="h2" component="h2" sx={{maxWidth: '20.5rem'}}>
         Fixe e acompanhe suas fixações mensais de maneira rápida e eficiente
       </Typography>
       <Button 

@@ -1,18 +1,16 @@
 import Image from "next/image";
 import Button from "../../../atoms/button/button";
-import MobileCardStyle from "./mobileLogin.style";
+import MobileLoginStyle from "./mobileLogin.style";
 import MicrosoftIcon from '@mui/icons-material/Microsoft';
 import { Typography } from "@mui/material";
-interface MobileCardProps {
+interface MobileLoginProps {
 
 }
 
-const MobileCard = ({
+const MobileLogin = ({
 
-}: MobileCardProps) => {
-  console.log('teste teste')
-  return (
-  <MobileCardStyle>
+}: MobileLoginProps) => (
+  <MobileLoginStyle>
     <div className="header-card">
       <Image
         width={96}
@@ -25,7 +23,7 @@ const MobileCard = ({
       <Typography variant="h1" component="h1">
         Frame Digital
       </Typography>
-      <Typography variant="h2" component="h2" style={{maxWidth: '328px'}}>
+      <Typography variant="h2" component="h2" sx={{maxWidth: '20.5rem'}}>
         Fixe e acompanhe suas fixações mensais de maneira rápida e eficiente
       </Typography>
       <Button 
@@ -33,11 +31,10 @@ const MobileCard = ({
         icon={MicrosoftIcon}
       />
     </div>
-  </MobileCardStyle>
-  );
-};
+  </MobileLoginStyle>
+);
 
-MobileCard.defaultProps = {
+MobileLogin.defaultProps = {
   disabled: false,
   buttonType: 'button',
   onClick: null,
@@ -46,4 +43,4 @@ MobileCard.defaultProps = {
   loading: false,
 };
 
-export default MobileCard;
+export default MobileLogin;

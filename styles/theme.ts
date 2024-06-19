@@ -69,14 +69,14 @@ const theme = createTheme({
         root: {
           textTransform: 'none',
           fontSize: '1rem',
-          padding: '10px 20px',
+          padding: '0.625rem 1.25rem',
         },
         contained: {
           backgroundColor: colors.blue_900,
           color: colors.white,
           borderRadius: '1.5rem',
           height: '3rem',
-          maxWidth: '328px',
+          maxWidth: '20.5rem',
           width: '100%',
           '&:hover': {
             backgroundColor: colors.blue_700,

@@ -4,10 +4,10 @@ export const MEDIUM_MOBILE_WIDTH_PX = 425;
 export const SMALL_MOBILE_WIDTH_PX = 375;
 export const SMALL_MOBILE_POPPER_WIDTH_PX = 360;
 
-export enum DEVICE_TYPES {
-  mobile,
-  desktop,
-}
+export const DEVICE_TYPES_CONST = {
+  mobile: 0,
+  desktop: 1,
+} as const;
 
 export const ROUTES = {
   login: './login',
